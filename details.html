@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elemento detalės</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<script src="functions.js"></script>
+
+</head>
+
+<script>
+// takes a variable that is in a page link after ? mark
+function GetQueryVariable(variable)
+{
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++)
+	{
+        var pair = vars[i].split("=");
+        if(pair[0] == variable){return pair[1];}
+    }
+    return(false);
+}
+
+$(function(){
+  var id = GetQueryVariable("id");
+  GetDetails(id);
+});
+</script>
+
+<body>
+
+<h1>Jūsų pasirinktos eilutės informacija</h1>
+
+<form action = "index.html">
+  <button class = "btn" id = "back_btn">Grįžti atgal</button>
+<form>
+
+	<table id="tablee">
+		<tr>
+			<th>userId</th>
+			<th>id</th>
+			<th>title</th>
+			<th>body</th>
+		</tr>
+	</table>
+
+</body>
+</html>

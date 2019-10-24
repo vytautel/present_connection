@@ -1,0 +1,40 @@
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elemento pridėjimas</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<script src="functions.js"></script>
+
+</head>
+
+<body>
+	<form id = "add_form">
+	  <h1>Įveskite naujo įrašo duomenis:</h1><br>
+	
+	  <label id = "alert_label" style= "display: block" ></label>
+	  
+	  <label class="add_label"><b>&nbsp;userId:&nbsp; </b></label>
+	  <input type="number" class="add_input" id="new_userId" name="new_userId" value="" required>
+	  <br>
+	  <label class="add_label"><b>&nbsp;title:&nbsp;</b></label>
+	  <input type="text" class="add_input" id="new_title" name="new_title" value="" required>
+	  <br>
+	  <label class="add_label"><b>&nbsp;body:&nbsp;</b></label>
+	  <input type="text" class="add_input" id="new_body" name="new_body" value="" required>
+
+	  <button class="btn" id = "add_new_btn" onclick = "New(event)">Pridėti</button>
+	</form>
+	
+	
+	<form action = "index.html">
+	  <button class = "btn" id = "back_btn" >Grįžti atgal</button>
+	<form>
+</body>
+
+</html>
